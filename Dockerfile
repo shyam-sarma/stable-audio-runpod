@@ -8,6 +8,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+ENV TRANSFORMERS_CACHE=/app/hf_cache
+
 EXPOSE 7860
 
 CMD ["python", "app.py"]

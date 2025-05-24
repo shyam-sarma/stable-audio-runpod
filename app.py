@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from pydantic import BaseModel
 import torch
@@ -7,6 +8,9 @@ import base64
 import tempfile
 from stable_audio_tools import get_pretrained_model
 from stable_audio_tools.inference.generation import generate_diffusion_cond
+
+# Set Hugging Face cache location
+os.environ["TRANSFORMERS_CACHE"] = "/app/hf_cache"
 
 app = FastAPI()
 
