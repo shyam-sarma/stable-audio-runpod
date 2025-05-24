@@ -1,3 +1,5 @@
 fastapi
 uvicorn
-stable-audio-tools
+torch
+torchaudio
+transformers
